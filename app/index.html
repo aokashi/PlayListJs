@@ -11,12 +11,21 @@
 			<h1>プレイリストJS</h1>
 		</header>
 		<main>
-			<div id="list_wrapper">
-				<!--リストとか色々-->
+			<div id="galleryWrapper" class="wrapper">
+				<img id="galleryImg" src="no_image.png">
+				<!--ギャラリーとか色々-->
 			</div>
-			<div id="player_wrapper">
-				<!--プレイヤーとか色々-->
+			<div id="listWrapper" class="wrapper">
+				<select name="list" id="listSelect" multiple="2"></select>
+				<select name="image" id="imageSelect"></select>
+				<select name="audio" id="audioSelect"></select>
+				<span id="currentId">0</span>
 			</div>
 		</main>
+		<footer>
+			<button id="previousButton">◁</button>
+			<audio id="playerAudio" autoplay controls></audio>
+			<button id="nextButton">▷</button>
+		</footer>
 	</body>
 </html>

@@ -1,20 +1,74 @@
 body{
-	background-color: #C0C0C0;
+	background-color: #E0E0E0;
 	color: #000;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
 	margin: 0;
 }
 
-header{
-	background-color: #000080;
-	color: #C0C0C0;
-	margin: 0;
+/* flexbox1層目(ヘッダー、メイン、フッターで、メインが広がる) */
+header,
+main,
+footer{
 	padding: 1rem;
 }
 
+header{
+	background-color: #008000;
+	color: #C0FFC0;
+	flex: 0;
+}
+
 header > h1{
+	font-size: 2rem;
 	margin: 0;
 }
 
 main{
-	margin: 1rem;
+	display: flex;
+	flex: 1;
+	flex-flow: column nowrap;
+	overflow: auto;
+}
+
+footer{
+	background-color: #808080;
+	flex: 0;
+	text-align: center;
+}
+
+/* flexbox2層目(メインの中で、各項目の中でリストが広がる) */
+.wrapper{
+	align-self: center;
+}
+
+#galleryWrapper{
+	flex: 0 0 auto;
+	margin-bottom: 1rem;
+}
+
+#listWrapper{
+	flex: 1 0 auto;
+}
+
+#listSelect{
+	background-color: #C0C0C0;
+	border: 0;
+	color: inherit;
+	height: 100%;
+	font-size: 1rem;
+}
+
+#gallery,
+#currentId,
+#imageSelect,
+#audioSelect{
+	display: none;
+}
+
+#previousButton,
+#playerAudio,
+#nextButton{
+	visibility: hidden;
 }
