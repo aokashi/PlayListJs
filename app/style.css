@@ -45,6 +45,9 @@ footer{
 
 #galleryWrapper{
 	flex: 0 0 auto;
+}
+
+#galleryImg{
 	margin-bottom: 1rem;
 }
 
